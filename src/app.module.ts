@@ -11,6 +11,7 @@ import { UsersModule } from './users/users.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
+      envFilePath: process.env.NODE_ENV === 'docker' ? '.env.docker' : '.env',
     }),
     MongooseModule.forRootAsync({
       inject: [ConfigService],

@@ -18,7 +18,7 @@ services:
     depends_on:
       - mongodb
     env_file:
-      - .env
+      - .env.docker
 
 volumes:
   mongo_data:
